@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "CameraControll",
+    "maps": [
+        {
+            "name": "ChangeCamera",
+            "id": "ebe77c17-c4fb-4886-ae2c-c4630f49af72",
+            "actions": [
+                {
+                    "name": "ChangeCamera",
+                    "type": "Button",
+                    "id": "8f25e60e-520c-4cfe-bf57-80f244c62a08",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "68399266-9013-494e-8d1a-5123aea83570",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

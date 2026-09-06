@@ -1,0 +1,103 @@
+{
+    "version": 1,
+    "name": "ControllerPlayer",
+    "maps": [
+        {
+            "name": "ChangeCamera",
+            "id": "ebe77c17-c4fb-4886-ae2c-c4630f49af72",
+            "actions": [
+                {
+                    "name": "ChangeCamera",
+                    "type": "Button",
+                    "id": "8f25e60e-520c-4cfe-bf57-80f244c62a08",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "68399266-9013-494e-8d1a-5123aea83570",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "PlayerController",
+            "id": "8bf84a39-8d03-4bac-bd90-8b18acaae033",
+            "actions": [
+                {
+                    "name": "Invetory",
+                    "type": "Button",
+                    "id": "b8de8de9-9592-4522-aae0-c3123bd1b2ca",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interactive",
+                    "type": "Button",
+                    "id": "cacda7e2-8698-4ec6-a492-15c7b6ddfa6b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Atack",
+                    "type": "Button",
+                    "id": "6ddee3d9-d147-4306-b896-9f9dcbd9c66c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "161cf2c4-557e-4be3-a692-cd970a0a1ea6",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Invetory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "634bb9a2-e5fe-4c4d-87fb-28f26a695736",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interactive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dcf36b2a-dc6d-4423-a136-b84b71b75e73",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Atack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
