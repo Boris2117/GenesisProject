@@ -34,6 +34,8 @@ Transform:
   - {fileID: 8863456376523500077}
   - {fileID: 2677985050867858134}
   - {fileID: 7147142014735737248}
+  - {fileID: 5539570238723984972}
+  - {fileID: 7308461326190256704}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &2292075550482847268
@@ -4862,12 +4864,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025588391195664089}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 12.423713, y: 0.61647034, z: -0.51999855}
-  m_LocalScale: {x: 1.4860991, y: 1.4860996, z: 1.4860991}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -20.32353, z: -12.203717}
+  m_LocalScale: {x: 1.4860994, y: 1.4860995, z: 1.4860994}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7147142014735737248}
+  m_Father: {fileID: 3843886487018399577}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &5516226703056745515
 ParticleSystem:
@@ -9699,9 +9701,7 @@ Transform:
   m_LocalPosition: {x: 0.52, y: -20.94, z: 0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5539570238723984972}
-  - {fileID: 7308461326190256704}
+  m_Children: []
   m_Father: {fileID: 3843886487018399577}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!198 &7441966324055116737
@@ -14525,12 +14525,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3152044306157678253}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.2520752, z: 0}
-  m_LocalScale: {x: 0.95865726, y: 0.95865726, z: 0.95865726}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.5199998, y: -21.192074, z: 0.22000079}
+  m_LocalScale: {x: 0.9586574, y: 0.9586572, z: 0.9586574}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7147142014735737248}
+  m_Father: {fileID: 3843886487018399577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &7377816158071011731
 ParticleSystem:
