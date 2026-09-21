@@ -38,11 +38,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Cubemap:
-        m_Texture: {fileID: 8900000, guid: 45d6ac70d735fa24d8557d4250dba5b0, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Cubemap_1:
-        m_Texture: {fileID: 8900000, guid: 656cd61720f668a478be91f17a64f7f6, type: 3}
+        m_Texture: {fileID: 8900000, guid: 9d7460d2d71b73f43b0ebfa155b5ad27, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleReflectedCubemap_5889322f6a564057becf6b9be7fe57ef_Cube_1_Cubemap:
@@ -65,7 +65,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _depth: 0.99
+    - _depth: -0.17
     m_Colors:
     - _tiling: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
