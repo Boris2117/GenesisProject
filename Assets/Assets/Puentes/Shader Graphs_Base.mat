@@ -24,6 +24,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _OtroMEtal:
+        m_Texture: {fileID: 2800000, guid: e1b14a268d3a62e48ba8ae426715cb03, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RejillaMask:
+        m_Texture: {fileID: 2800000, guid: ccb513264aa9f9b409e69229cc4aa635, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_355651b0638a45d5bb9dc863885e8acb_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: ccb513264aa9f9b409e69229cc4aa635, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_3f2822123b0b4383805eafa110c164d9_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 53d7d927b8cd4194bb8f6d2d7d8d8f8e, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -42,13 +54,24 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Cutoff: 1.09
+    - _DistX: 1.38
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _X: 5.13
+    - _Smoothness: 0.2
+    - _X: 29.7
+    - _border: 0.42
+    - _metallic: 21.71
     - _x2: 5.04
-    - _y: 0.08
+    - _y: 2
     - _y2: 0.95
-    m_Colors: []
+    m_Colors:
+    - _Metallic: {r: 0, g: 0, b: 0, a: 0}
+    - _Offset: {r: 1, g: 1, b: 0, a: 0}
+    - _Offset1: {r: 0, g: 0, b: 0, a: 0}
+    - _Uv1: {r: 125.78, g: 1.29, b: 0, a: 0}
+    - _Uv2: {r: 295.14, g: 8.22, b: 0, a: 0}
+    - _smoothness: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &7447340040197802986
