@@ -46,18 +46,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Metalic: 0.92
+    - _Metalic: 0.793
     - _MudA: 0.698
     - _MudB: 0.418
     - _MudNoise: 13.4
-    - _Normal: 3.16
-    - _PuddleA: 0.816
-    - _PuddleB: 0.382
-    - _PuddleNoise: 69.9
+    - _Normal: 3.88
+    - _PuddleA: 0.451
+    - _PuddleB: 0.297
+    - _PuddleNoise: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothnes: 0.891
-    - _tile: 0.96
+    - _Smoothnes: 0
+    - _tile: 1.95
     m_Colors:
     - _Color: {r: 0.6603774, g: 0.65103245, b: 0.65103245, a: 0}
     - _MudColor: {r: 0.17933428, g: 0.18701264, b: 0.24528301, a: 0}

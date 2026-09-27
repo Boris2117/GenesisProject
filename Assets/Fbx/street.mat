@@ -50,13 +50,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Amplitude: 6
+    - _Amplitude: 4.42
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Steps: 84.1
     - _TileSize: 2
     m_Colors:
-    - _TileSize_1: {r: 3, g: 3, b: 0, a: 0}
+    - _TileSize_1: {r: -0.17, g: 0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3794186711229581736
