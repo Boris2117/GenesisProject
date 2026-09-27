@@ -45,10 +45,11 @@ Material:
     - _WorldY: -0.04
     - _WorldZ: 0
     - _Worldx: 1
-    - _cantLiquid: -0.03
+    - _cantLiquid: -0.01
+    - _metallic: 0.48
     m_Colors:
     - _FrenselColor: {r: 0.6981132, g: 0.530289, b: 0.29307583, a: 0}
-    - _Liquid_Color: {r: 0.254717, g: 0.24807186, b: 0.056470275, a: 0}
+    - _Liquid_Color: {r: 0.6698113, g: 0.5324851, b: 0.14217694, a: 0}
     - _Surface_color: {r: 0.25490198, g: 0.24705884, b: 0.054901965, a: 0.8784314}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
