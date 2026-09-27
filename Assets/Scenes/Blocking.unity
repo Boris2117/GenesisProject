@@ -26075,6 +26075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rain
       objectReference: {fileID: 0}
+    - target: {fileID: 2292075550482847268, guid: efcf3b2491e132a43ad4373c2874e13e, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3843886487018399577, guid: efcf3b2491e132a43ad4373c2874e13e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.14889
@@ -26116,8 +26120,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5516226703056745515, guid: efcf3b2491e132a43ad4373c2874e13e, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516226703056745515, guid: efcf3b2491e132a43ad4373c2874e13e, type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
       value: 0.007843138
+      objectReference: {fileID: 0}
+    - target: {fileID: 7304457660213073596, guid: efcf3b2491e132a43ad4373c2874e13e, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441966324055116737, guid: efcf3b2491e132a43ad4373c2874e13e, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872424027224341010, guid: efcf3b2491e132a43ad4373c2874e13e, type: 3}
+      propertyPath: moveWithTransform
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
