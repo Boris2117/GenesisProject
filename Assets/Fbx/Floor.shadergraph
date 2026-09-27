@@ -149,9 +149,6 @@
         },
         {
             "m_Id": "ecbfc5a127eb4be9a23edcac3eee9296"
-        },
-        {
-            "m_Id": "dd02cfb0c3e54d0a8a1b776a2c626ffa"
         }
     ],
     "m_GroupDatas": [],
@@ -632,9 +629,6 @@
             },
             {
                 "m_Id": "fc91a50f2b5c4c0dae24b48f29d0348c"
-            },
-            {
-                "m_Id": "dd02cfb0c3e54d0a8a1b776a2c626ffa"
             }
         ]
     },
@@ -2037,7 +2031,7 @@
         "m_Id": "36db650ede334d0d81545a25b6ffdf2c"
     },
     "m_AllowMaterialOverride": false,
-    "m_SurfaceType": 1,
+    "m_SurfaceType": 0,
     "m_ZTestMode": 4,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
@@ -2737,21 +2731,6 @@
     "m_StageCapability": 2,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "a2ca805b40ef485db03623401937657f",
-    "m_Id": 0,
-    "m_DisplayName": "Alpha",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Alpha",
-    "m_StageCapability": 2,
-    "m_Value": 1.0,
-    "m_DefaultValue": 1.0,
     "m_Labels": []
 }
 
@@ -3741,40 +3720,6 @@
         "m_SerializableColors": []
     },
     "m_BlendMode": 13
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
-    "m_ObjectId": "dd02cfb0c3e54d0a8a1b776a2c626ffa",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SurfaceDescription.Alpha",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "a2ca805b40ef485db03623401937657f"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
 }
 
 {
