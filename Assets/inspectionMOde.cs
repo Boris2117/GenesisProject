@@ -1,29 +1,48 @@
 using StarterAssets;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class inspectionMOde : MonoBehaviour
 {
     public StarterAssetsInputs starterAssetsInputs; // asignalo en el Inspector
+    
+    public Camera inspectCamera;
+    public GameObject playerCameraObject;
+    public bool isInspecting;
 
-  
+    private InputAction interactAction;
 
-    [ContextMenu("Enter Inspect Mode")]
+    void OnEnable()
+    {
+        interactAction = new InputAction(binding: "<Keyboard>/e");
+        interactAction.Enable();
+        interactAction.performed += ctx =>
+        {
+            if (isInspecting) ExitInspectMode();
+        };
+    }
+
+    void OnDisable() => interactAction.Disable();
+
     public void EnterInspectMode()
     {
+        isInspecting = true;
         starterAssetsInputs.cursorLocked = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        Debug.Log("Entrando a modo inspección");
+        playerCameraObject.SetActive(false);
+        inspectCamera.gameObject.SetActive(true);
     }
 
-    [ContextMenu("Exit Inspect Mode")]
     public void ExitInspectMode()
     {
+        isInspecting = false;
         starterAssetsInputs.cursorLocked = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        Debug.Log("Saliendo de modo inspección");
+        inspectCamera.gameObject.SetActive(false);
+        playerCameraObject.SetActive(true);
     }
 }

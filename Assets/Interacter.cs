@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,19 +10,20 @@ public class Interacter : MonoBehaviour
     public InteractPrompt promptCanvas;
 
     [Header("Inspect Mode")]
-    public Camera inspectCamera;          // la cámara de inspección (desactivada por default)
-    public GameObject playerCameraObject; // la cámara del pj, para desactivarla al inspeccionar
+    public Camera inspectCamera;
+    public GameObject playerCameraObject;
     public inspectionMOde inspectManager;
     public inspect inspectSystem;
 
     private Interactable currentTarget;
     private InputAction interactAction;
+    private bool isInspecting;
 
     void OnEnable()
     {
         interactAction = new InputAction(binding: "<Keyboard>/e");
         interactAction.Enable();
-        interactAction.performed += ctx => TryInteract();
+        interactAction.performed += ctx => OnInteractPressed();
     }
 
     void OnDisable()
@@ -29,9 +31,13 @@ public class Interacter : MonoBehaviour
         interactAction.Disable();
     }
 
-    void TryInteract()
+    void OnInteractPressed()
     {
-        if (currentTarget != null)
+        if (isInspecting)
+        {
+            ExitInspect();
+        }
+        else if (currentTarget != null)
         {
             EnterInspect(currentTarget);
         }
@@ -39,22 +45,32 @@ public class Interacter : MonoBehaviour
 
     void EnterInspect(Interactable target)
     {
-        // apagar cámara del pj, prender cámara de inspección
+        isInspecting = true;
+
         playerCameraObject.SetActive(false);
         inspectCamera.gameObject.SetActive(true);
 
-        // asignar el objeto a inspeccionar
         inspectSystem.objectToInspect = target.transform;
 
-        // avisar al manager (cursor, StarterAssetsInputs, etc.)
         inspectManager.EnterInspectMode();
 
-        // ocultar el prompt mientras se inspecciona
         promptCanvas.Hide();
+    }
+
+    void ExitInspect()
+    {
+        isInspecting = false;
+
+        inspectCamera.gameObject.SetActive(false);
+        playerCameraObject.SetActive(true);
+
+        inspectManager.ExitInspectMode();
     }
 
     void Update()
     {
+        if (isInspecting) return;
+
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
 
         if (Physics.Raycast(ray, out RaycastHit hit, interactRange, interactableLayer))

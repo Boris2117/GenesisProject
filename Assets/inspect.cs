@@ -4,11 +4,9 @@ using UnityEngine.InputSystem;
 public class inspect : MonoBehaviour
 {
     public Transform objectToInspect;
-
     public float rotationSpeed = 100f;
 
     private Vector3 previousMousePosition;
-
     private InputAction pointAction;
     private InputAction clickAction;
 
@@ -16,7 +14,6 @@ public class inspect : MonoBehaviour
     {
         pointAction = new InputAction(binding: "<Mouse>/position");
         clickAction = new InputAction(binding: "<Mouse>/leftButton");
-
         pointAction.Enable();
         clickAction.Enable();
     }
