@@ -75,7 +75,7 @@ Material:
     - _QueueOffset: 0
     - _Smoothness: 0
     - _amplitude: 0.02
-    - _border: 0.48
+    - _border: 0.36
     - _metallic: 0
     - _x2: 0
     - _y2: 0
