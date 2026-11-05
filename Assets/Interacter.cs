@@ -111,43 +111,43 @@ public class Interacter : MonoBehaviour
         inspectManager.ExitInspectMode();
     }
 
-    void Update()
+   void Update()
+{
+    if (isInspecting)
     {
-        if (isInspecting)
-        {
-            SetOutline(null);
-            return;
-        }
-
-        Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-        OutlineShow found = null;
-        Interactable interactable = null;
-
-        if (Physics.Raycast(ray, out RaycastHit hit, interactRange, interactableLayer))
-        {
-            Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green);
-
-            found = hit.collider.GetComponentInParent<OutlineShow>();
-            interactable = hit.collider.GetComponentInParent<Interactable>();
-        }
-        else
-        {
-            Debug.DrawRay(ray.origin, ray.direction * interactRange, Color.red);
-        }
-
-        SetOutline(found);
-
-        if (interactable != null)
-        {
-            currentTarget = interactable;
-            promptCanvas.Show();
-        }
-        else
-        {
-            currentTarget = null;
-            promptCanvas.Hide();
-        }
+        SetOutline(null);
+        return;
     }
+
+    Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+    OutlineShow found = null;
+    Interactable interactable = null;
+
+    if (Physics.Raycast(ray, out RaycastHit hit, interactRange, interactableLayer))
+    {
+        Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green);
+
+        found = hit.collider.GetComponentInParent<OutlineShow>();
+        interactable = hit.collider.GetComponentInParent<Interactable>();
+    }
+    else
+    {
+        Debug.DrawRay(ray.origin, ray.direction * interactRange, Color.red);
+    }
+
+    SetOutline(found);
+
+    if (interactable != null)
+    {
+        currentTarget = interactable;
+        promptCanvas.Show();
+    }
+    else
+    {
+        currentTarget = null;
+        promptCanvas.Hide();
+    }
+}
     private void SetOutline(OutlineShow newOutline)
     {
         if (newOutline == currentOutline) return;
