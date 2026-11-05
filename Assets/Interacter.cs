@@ -8,7 +8,7 @@ public class Interacter : MonoBehaviour
     public float interactRange = 3f;
     public LayerMask interactableLayer;
     public InteractPrompt promptCanvas;
-
+    private OutlineShow currentOutline;
     [Header("Inspect Mode")]
     public Camera inspectCamera;
     public GameObject playerCameraObject;
@@ -113,29 +113,47 @@ public class Interacter : MonoBehaviour
 
     void Update()
     {
-        if (isInspecting) return;
+        if (isInspecting)
+        {
+            SetOutline(null);
+            return;
+        }
 
         Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+        OutlineShow found = null;
+        Interactable interactable = null;
 
         if (Physics.Raycast(ray, out RaycastHit hit, interactRange, interactableLayer))
         {
             Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.green);
 
-            Interactable interactable = hit.collider.GetComponent<Interactable>();
-
-            if (interactable != null)
-            {
-                currentTarget = interactable;
-                promptCanvas.Show();
-                return;
-            }
+            found = hit.collider.GetComponentInParent<OutlineShow>();
+            interactable = hit.collider.GetComponentInParent<Interactable>();
         }
         else
         {
             Debug.DrawRay(ray.origin, ray.direction * interactRange, Color.red);
         }
 
-        currentTarget = null;
-        promptCanvas.Hide();
+        SetOutline(found);
+
+        if (interactable != null)
+        {
+            currentTarget = interactable;
+            promptCanvas.Show();
+        }
+        else
+        {
+            currentTarget = null;
+            promptCanvas.Hide();
+        }
+    }
+    private void SetOutline(OutlineShow newOutline)
+    {
+        if (newOutline == currentOutline) return;
+
+        if (currentOutline != null) currentOutline.SetHighlight(false);
+        currentOutline = newOutline;
+        if (currentOutline != null) currentOutline.SetHighlight(true);
     }
 }
