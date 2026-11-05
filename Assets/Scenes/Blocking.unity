@@ -8260,7 +8260,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6904056815793634119, guid: e72cc893c60fa684788d2f06c22a1849, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2951155699532083776, guid: e72cc893c60fa684788d2f06c22a1849, type: 3}
@@ -27732,6 +27733,10 @@ PrefabInstance:
     - target: {fileID: 1070149208707532910, guid: e233bacec7a497b4693f090a93581964, type: 3}
       propertyPath: m_LocalPosition.z
       value: -41.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1456452127103549630, guid: e233bacec7a497b4693f090a93581964, type: 3}
+      propertyPath: m_Name
+      value: Render
       objectReference: {fileID: 0}
     - target: {fileID: 2949856243442809849, guid: e233bacec7a497b4693f090a93581964, type: 3}
       propertyPath: NoiseModule.enabled
