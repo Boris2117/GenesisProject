@@ -49,8 +49,8 @@ MonoBehaviour:
   - {fileID: 3537150231185360106}
   - {fileID: -8538018816027832012}
   - {fileID: 306228019596609145}
-  - {fileID: 8829143076143409784}
-  m_RendererFeatureMap: ad6b866f10d7b46cea84fe06657b163134510f891fdd828979c653e8c2f03f0478aaa054d96a877a
+  - {fileID: 9002958951753471840}
+  m_RendererFeatureMap: ad6b866f10d7b46cea84fe06657b163134510f891fdd828979c653e8c2f03f046057b08677eff07c
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
@@ -142,7 +142,7 @@ MonoBehaviour:
     BlurQuality: 0
     Falloff: 100
     SampleCount: -1
---- !u!114 &8829143076143409784
+--- !u!114 &9002958951753471840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,7 +158,7 @@ MonoBehaviour:
   injectionPoint: 600
   fetchColorBuffer: 1
   requirements: 0
-  passMaterial: {fileID: 2100000, guid: a0da1f15062feff4b82a35b4c8370a86, type: 2}
+  passMaterial: {fileID: 2100000, guid: 78a08787ca30045abb69f6f7dd878e09, type: 2}
   passIndex: 0
   bindDepthStencilAttachment: 0
   m_Version: 1

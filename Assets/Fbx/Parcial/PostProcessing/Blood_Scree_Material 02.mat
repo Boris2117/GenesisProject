@@ -42,8 +42,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _Offset: 1
-    - _ScreenIntencity: 7.16
-    - _ScreenPower: 4.31
+    - _ScreenIntencity: 11.06
+    - _ScreenPower: 5.42
     m_Colors:
     - _Color: {r: 0.16862746, g: 0, b: 0, a: 1}
     - _Tiling: {r: 1, g: 1, b: 0, a: 0}
