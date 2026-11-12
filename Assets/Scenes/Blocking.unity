@@ -1167,7 +1167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 35990813}
   - component: {fileID: 35990812}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: blood_animation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8253,6 +8253,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5497438783012620594, guid: e72cc893c60fa684788d2f06c22a1849, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5851319897788720244, guid: e72cc893c60fa684788d2f06c22a1849, type: 3}
       propertyPath: m_Name
       value: Pj1
@@ -11077,6 +11081,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3917959286568894627, guid: a4974b0e029329046b99e774410b1d58, type: 3}
   m_PrefabInstance: {fileID: 1322772363}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &381174383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 381174385}
+  - component: {fileID: 381174384}
+  m_Layer: 0
+  m_Name: DetectiveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &381174384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381174383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fff1d7a44c60e8a4786d8102a5c6b115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rendererData: {fileID: 11400000, guid: f288ae1f4751b564a96ac7587541f7a2, type: 2}
+  tintFeatureName: Detective color
+  highlightFeatureName: Detective Highlight
+  tintMaterial: {fileID: -876546973899608171, guid: 3011f4ff57795514fa92b1ec452b685f, type: 3}
+  intensityProperty: _Intensity
+  fadeSpeed: 4
+--- !u!4 &381174385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381174383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 124.82, y: 3.6999998, z: 25.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &381249028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3917959286568894627, guid: a4974b0e029329046b99e774410b1d58, type: 3}
@@ -16080,6 +16134,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8513424388201257645, guid: 62cc74766d6378f4f80b0896a748fa3d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 62cc74766d6378f4f80b0896a748fa3d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -16100,14 +16158,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Surtidor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62cc74766d6378f4f80b0896a748fa3d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1507767883509144192, guid: 62cc74766d6378f4f80b0896a748fa3d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1678216783806058623, guid: 62cc74766d6378f4f80b0896a748fa3d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 76b8eff857de32a4893f9be550db04f1, type: 2}
+    - target: {fileID: 2033415054182305186, guid: 62cc74766d6378f4f80b0896a748fa3d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305611551656725180, guid: 62cc74766d6378f4f80b0896a748fa3d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3916859645064351834, guid: 62cc74766d6378f4f80b0896a748fa3d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 76b8eff857de32a4893f9be550db04f1, type: 2}
+    - target: {fileID: 9140130539982293932, guid: 62cc74766d6378f4f80b0896a748fa3d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -61397,3 +61475,4 @@ SceneRoots:
   - {fileID: 64495217}
   - {fileID: 624535802}
   - {fileID: 35990813}
+  - {fileID: 381174385}
