@@ -3,6 +3,14 @@ using UnityEngine.InputSystem;
 
 public class inspect : MonoBehaviour
 {
+    [Header("Revelado")]
+    [SerializeField] string propiedad = "_Reveal";   
+    [SerializeField] float Revel = 0.0005f; 
+    [SerializeField] float decay = 0f;          
+    
+    private Renderer rend;
+    private float reveal;
+
     public Transform objectToInspect;
     public float rotationSpeed = 100f;
 
@@ -26,6 +34,12 @@ public class inspect : MonoBehaviour
 
     void Update()
     {
+        if (objectToInspect == null) return;
+
+        // buscamos el Renderer una sola vez (sirve aunque el material esté en un hijo)
+        if (rend == null)
+            rend = objectToInspect.GetComponentInChildren<Renderer>();
+
         if (clickAction.WasPressedThisFrame())
         {
             previousMousePosition = pointAction.ReadValue<Vector2>();
@@ -40,7 +54,16 @@ public class inspect : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(rotationX, rotationY, 0);
             objectToInspect.rotation = rotation * objectToInspect.rotation;
 
+            // cuanto más movés el mouse, más sube el float
+            reveal += deltaMousePosition.magnitude * Revel;
+
             previousMousePosition = pointAction.ReadValue<Vector2>();
         }
+      
+
+        reveal = Mathf.Clamp01(reveal);
+
+        if (rend != null)
+            rend.material.SetFloat(propiedad, reveal);
     }
 }
