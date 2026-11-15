@@ -29,6 +29,10 @@ public class Objetives : MonoBehaviour
     void Refrescar()
     {
         if (textoUI != null)
-            textoUI.text = "Objetivo: Buscar pistas + \n" + $"Pistas: {pistas}/{pistasNecesarias}";
+            textoUI.text = "Objetivo: Buscar pistas \n" + $"Pistas: {pistas}/{pistasNecesarias}";
+    }
+    public void Finish()
+    {
+        textoUI.text = "Tienes todas las pruebas, explora un poco la zona o avanza con la investigacion";
     }
 }
