@@ -1,19 +1,26 @@
+using NUnit.Framework;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class inspect : MonoBehaviour
 {
     [Header("Revelado")]
-    [SerializeField] string propiedad = "_Reveal";   
-    [SerializeField] float Revel = 0.0005f; 
-    [SerializeField] float decay = 0f;          
-    
-    private Renderer rend;
-    private float reveal;
+    [SerializeField] string propiedad = "_Reveal";
+    [SerializeField] float gananciaRevelado = 0.0015f;
 
-    public Transform objectToInspect;
+    [Header("Inspección")]
+    public Transform objectToInspect;   // el wrapper
     public float rotationSpeed = 100f;
 
+    private Dictionary<Interactable, float> reveals = new Dictionary<Interactable, float>();
+    private HashSet<Interactable> contadas = new HashSet<Interactable>();
+
+    private Interactable actual;
+    private Renderer rend;
+    private bool esRevelable;
+    [SerializeField] float timetodestroy = 1.5f;
     private Vector3 previousMousePosition;
     private InputAction pointAction;
     private InputAction clickAction;
@@ -26,24 +33,32 @@ public class inspect : MonoBehaviour
         clickAction.Enable();
     }
 
-    void OnDisable()
-    {
-        pointAction.Disable();
-        clickAction.Disable();
-    }
+
+
+  
 
     void Update()
     {
         if (objectToInspect == null) return;
 
-        // buscamos el Renderer una sola vez (sirve aunque el material esté en un hijo)
-        if (rend == null)
-            rend = objectToInspect.GetComponentInChildren<Renderer>();
+        // buscamos el Interactable dentro del wrapper (por si cambia el contenido)
+        var info = objectToInspect.GetComponentInChildren<Interactable>();
+
+        if (info != actual)
+        {
+            actual = info;
+            rend = actual != null
+                ? actual.GetComponentInChildren<Renderer>()
+                : objectToInspect.GetComponentInChildren<Renderer>();
+
+            esRevelable = actual != null && actual.tipo == TipoInspeccion.Revelable;
+
+            if (esRevelable && !reveals.ContainsKey(actual))
+                reveals[actual] = 0f;
+        }
 
         if (clickAction.WasPressedThisFrame())
-        {
             previousMousePosition = pointAction.ReadValue<Vector2>();
-        }
 
         if (clickAction.IsPressed())
         {
@@ -54,16 +69,44 @@ public class inspect : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(rotationX, rotationY, 0);
             objectToInspect.rotation = rotation * objectToInspect.rotation;
 
-            // cuanto más movés el mouse, más sube el float
-            reveal += deltaMousePosition.magnitude * Revel;
+            if (esRevelable && !contadas.Contains(actual))
+                reveals[actual] += deltaMousePosition.magnitude * gananciaRevelado;
 
             previousMousePosition = pointAction.ReadValue<Vector2>();
         }
-      
 
-        reveal = Mathf.Clamp01(reveal);
+        // los objetos normales terminan acá (solo rotan)
+        if (!esRevelable) return;
 
-        if (rend != null)
-            rend.material.SetFloat(propiedad, reveal);
+        reveals[actual] = Mathf.Clamp01(reveals[actual]);
+        if (rend != null) rend.material.SetFloat(propiedad, reveals[actual]);
+
+        // al terminar de revelar, suma una sola vez por objeto
+        if (reveals[actual] >= 1f && !contadas.Contains(actual))
+        {
+            contadas.Add(actual);
+            Objetives.Instance.SumarPista();
+            
+        }
+
+
+    }
+    void OnDisable()
+    {
+        pointAction.Disable();
+        clickAction.Disable();
+
+        // si en esta inspección se reveló una foto, destruimos la que está en la mano
+        if (contadas.Count > 0 && CameraFoto.ultimaFoto != null)
+        {
+            Destroy(CameraFoto.ultimaFoto);
+            CameraFoto.ultimaFoto = null;
+        }
+
+        contadas.Clear();
+        reveals.Clear();
+        actual = null;
+        esRevelable = false;
+        rend = null;
     }
 }
