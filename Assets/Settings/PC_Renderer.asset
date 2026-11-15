@@ -60,26 +60,6 @@ MonoBehaviour:
   passIndex: 0
   bindDepthStencilAttachment: 0
   m_Version: 1
---- !u!114 &-676236987946878830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00045f12942b46c698459096c89274e, type: 3}
-  m_Name: FullScreenPassRendererFeature
-  m_EditorClassIdentifier: 
-  m_Active: 1
-  injectionPoint: 600
-  fetchColorBuffer: 1
-  requirements: 0
-  passMaterial: {fileID: 2100000, guid: 1fd9fb8083031a241b55204fe1e7d2ce, type: 2}
-  passIndex: 0
-  bindDepthStencilAttachment: 0
-  m_Version: 1
 --- !u!114 &-496691313749745992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,8 +137,7 @@ MonoBehaviour:
   - {fileID: -1565764341312658466}
   - {fileID: -496691313749745992}
   - {fileID: -8070877714778454296}
-  - {fileID: -676236987946878830}
-  m_RendererFeatureMap: ad6b866f10d7b46cea84fe06657b163134510f891fdd828979c653e8c2f03f04a110d47bddd5c86a6057b08677eff07c89bd88fc60d9f00bdee3159aa04945eab89eecb8e1651bf9e88603d17a7bfe8f923872d50a869df6
+  m_RendererFeatureMap: ad6b866f10d7b46cea84fe06657b163134510f891fdd828979c653e8c2f03f04a110d47bddd5c86a6057b08677eff07c89bd88fc60d9f00bdee3159aa04945eab89eecb8e1651bf9e88603d17a7bfe8f
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
