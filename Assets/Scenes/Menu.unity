@@ -48673,8 +48673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7995eab16ba5c1c4fa54a2ddb4473c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blur: 10
-  velocidad: 0.1
+  blur: 8
+  velocidad: 10
   blurSalida: 1.5
   velocidadSalida: 0.3
 --- !u!1 &1760198344
@@ -57740,7 +57740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blurBase: 1.5
-  velocidadBase: 0.3
+  velocidadBase: 2.13
   suavizado: 8
 --- !u!4 &1964161179 stripped
 Transform:
